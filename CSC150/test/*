@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int getNum( int r )
+{
+        int k, x = 1;
+        for ( k = 1; k <= r; k++ )
+        {
+                if ( x % 2 )
+                        x = x * k;
+                else
+                        x = x + k;
+                x = x % 11393;
+        }
+        x = x % 11393;
+        return x;
+}
+
+int sumOddVal( int L[], int N )
+{
+}
+
+int sumOddPos( int L[], int N )
+{
+}
+
+int howmanyEven( int L[], int N )
+{
+}
+
+int sum( int L[], int N )
+{
+}
+
+
+int main()
+{
+        int A[20];
+        int j;
+        for ( j = 0; j < 20; j++ )
+        {
+                A[j] = getNum( j + 2 );
+        }
+        for ( j = 0; j < 20; j++ )
+        {
+                printf("%2d: %d\n", j, A[j]);
+        }
+
+        // call all the functions & print the results
+
+        return 0;
+}

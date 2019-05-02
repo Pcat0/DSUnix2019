@@ -1,0 +1,82 @@
+Assignment: Binary Files
+Due: 4/16  8:00pm
+Submission:  2 programs to D2L Quiz  BinQ
+
+In your home directory, 2 executable files 
+a) tobin
+b) inbin
+as described below; make sure you have them.
+-- I'll use my text & binary files for testing
+   so make sure you follow specifications
+
+
+Program 1:  Read a text file, write a binary file
+ - purpose:
+   : Read the information from a basic text file
+   : Write information to a binary file
+   : file content/format descriptions can be found below 
+ - executable: tobin
+ - to use:     tobin   myfile 
+ - will create:    myfile.bin
+ - to screen:  
+     - any errors about files
+     - on success, number of records read/written 
+
+Program 2: Read a binary file, report to screen
+ - purpose:
+   : Read the information from the binary file
+   : Display screen data as requested
+   : file content/format descriptions can be found below 
+ - executable: inbin
+ - to use:     inbin  afile 
+ - to screen:  
+     - any errors about file
+     - on success, number of records read 
+         : data for first record on 1 line
+         : data for second to last record on 1 line
+				unless there is only 1 record
+
+
+
+Data:
+ Name: string in array of 25 characters, 25 ( not 24 or 26)
+ iNum: integer value
+ fNum: float value
+
+Input text file format:
+ - properly formatted data records
+ - as many as I want
+
+Binary file format:
+ - first entry is an integer, N, how many records are in file
+ - as many as I want
+ - what follows is data in order ( name inum fnum )
+     as described above
+
+
+
+
+Sample file provided:  /tmp/250T/abin    and  /tmp/250T/abin.bin
+
+% ./tobin abin
+5 records stored to abin.bin
+
+
+% ./inbin abin.bin
+5 records
+First: Fred 23 2.990000
+Next to last: Bobby 456 18.844000
+
+
+
+
+
+New functions you need to use:
+ : fwrite
+ : fread
+ : fseek
+
+
+
+Hint: this is not a linked-list program
+

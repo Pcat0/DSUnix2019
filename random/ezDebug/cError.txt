@@ -1,0 +1,4 @@
+test.c: In function 'main':
+test.c:4:2: error: expected ';' before 'return'
+  return 0;
+  ^~~~~~

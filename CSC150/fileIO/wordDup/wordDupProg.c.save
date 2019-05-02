@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_WORD_LEN 50
+#define MAX_WORD_COUNT 750
+int main(){
+	char wList[MAX_WORD_COUNT][MAX_WORD_LEN];
+	int i = 0, len;
+	int maxPos, maxLen = (int)-INFINITY;
+	while (fgets(wList[i], 50, stdin) != NULL) {
+		len = strlen(wList[i]) - 1;
+		wList[i][len] = '\0';
+		printf("%d] %s\n", i, wList[i]);
+		
+		w++;
+	}
+	return 0;
+}
+

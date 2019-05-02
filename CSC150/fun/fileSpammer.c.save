@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+
+int main(){
+	unsigned long long length = 123456789 - 57;
+	FILE *fp;
+	char fileName[] = "/test";
+	char filePath[4097];
+	getcwd(&filePath, 4096);
+	strcat(filePath, fileName);
+	//printf("%s\n", filePath);
+
+	fp = fopen(filePath, "w");
+	for(unsigned long long i = 0; i < length; i++){
+		putc('/', fp);
+	}
+	fclose(fp);
+
+	return 0;
+}
+
